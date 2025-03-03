@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Harold Strosin",
+      "id": 4
+    },
+    {
+      "name": "Vera Toy",
+      "id": 5
+    },
+    {
+      "name": "Edmund Renner",
+      "id": 6
+    },
+    {
+      "name": "Harvey Bartoletti",
+      "id": 7
+    },
+    {
+      "name": "Rosie Nienow",
+      "id": 9
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Hiking trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Sleek Granite Keyboard",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "title": "Sleek Granite Shirt",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "Modern Metal Soap",
+      "id": 4
+    }
+  ],
+  "photos": []
+}
