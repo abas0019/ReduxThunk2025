@@ -39,4 +39,4 @@ function AlbumsList({ user }) {
   );
 }
 
-export default AlbumsList;
+//export default AlbumsList;

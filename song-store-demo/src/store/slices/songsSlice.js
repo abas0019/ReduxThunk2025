@@ -25,6 +25,7 @@ const songsSlice = createSlice({
 export const { addSong, removeSong } = songsSlice.actions;  //Burde hedde actionCreators i stedet for actions!!!
 export const songsReducer = songsSlice.reducer;
 
+console.log("songsSlice.actions: ");
 console.log(songsSlice.actions); //{addSong: ƒ, removeSong: ƒ} action creator functions
 console.log(songsSlice.actions.addSong("Andreas Odberg - I morgen er der også en dag")); //{type: "song/addSong", payload: "Andreas Odberg - I morgen er der også en dag"}
 
