@@ -45,7 +45,28 @@
       "userId": 1,
       "title": "Modern Metal Soap",
       "id": 4
+    },
+    {
+      "userId": 4,
+      "title": "Recycled Soft Chair",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "title": "Handcrafted Concrete Mouse",
+      "id": 6
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 5,
+      "url": "https://loremflickr.com/150/150/abstract?lock=33979",
+      "id": 1
+    },
+    {
+      "albumId": 5,
+      "url": "https://loremflickr.com/150/150/abstract?lock=39805",
+      "id": 2
+    }
+  ]
 }

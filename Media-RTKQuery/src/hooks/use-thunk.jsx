@@ -10,7 +10,7 @@ export function useThunk(thunk) {
     (arg) => {
       setIsLoading(true);
       dispatch(thunk(arg))
-        .unwrap()       //unwrap() er en metode der returnerer den faktiske værdi af en promise altså et typisk promise objekt
+        .unwrap()
         .catch((err) => setError(err))
         .finally(() => setIsLoading(false));
     },
@@ -19,7 +19,3 @@ export function useThunk(thunk) {
 
   return [runThunk, isLoading, error];
 }
-
-//useCallback er et hook der angiver at en funktion ikke ændres over tid (mellem rendering af forskellige komponenter)
-//det er med til at sikre der ikke sker et uendeligt loop - specielt benyttet ifm useEffect
-//beregnet til at lave et "bugfix"
