@@ -14,7 +14,9 @@ export const store = configureStore({
     .concat(moviesApi.middleware);
   }
 });
-
+console.log(store.getState());
+console.log(searchMovieReducer);
+console.log(changeSearchTerm);
 setupListeners(store.dispatch);
 
 

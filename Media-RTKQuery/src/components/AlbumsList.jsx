@@ -4,7 +4,10 @@ import Button from './Button';
 import AlbumsListItem from './AlbumsListItem';
 
 function AlbumsList({ user }) {
-  const { data, error, isFetching } = useFetchAlbumsQuery(user);
+  const { data, error, isFetching } = useFetchAlbumsQuery(user);  //Bemærk kaldes kun en gang, når komponenten mountes (RTK Query kan også håndtere at der kun fetches data en gang selv om komponenten gentegnes flere gange)
+
+  console.log("data, error, isFetching");
+  console.log(data, error, isFetching);
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAddAlbum = () => {

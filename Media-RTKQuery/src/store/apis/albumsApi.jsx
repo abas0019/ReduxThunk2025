@@ -9,13 +9,13 @@ const pause = (duration) => {
 };
 
 const albumsApi = createApi({
-  reducerPath: 'albums',
-  baseQuery: fetchBaseQuery({
+  reducerPath: 'albums',          //Bliver til navnet på vores state i storen
+  baseQuery: fetchBaseQuery({     //fetchBaseQuery er en funktion fra RTK Query, som vi bruger til at lave vores baseQuery 
     baseUrl: 'http://localhost:3005',
     fetchFn: async (...args) => {
-      // REMOVE FOR PRODUCTION
+      // REMOVE FOR PRODUCTION - DEV ONLY!!!
       await pause(1000);
-      return fetch(...args);
+      return fetch(...args);     //preconfiguret version af 'fetch' der er klar til at lave requests til vores API
     },
   }),
   endpoints(builder) {
@@ -32,7 +32,7 @@ const albumsApi = createApi({
         },
       }),
       addAlbum: builder.mutation({
-        invalidatesTags: (result, error, user) => {
+        invalidatesTags: (result, error, user) => {          //invalidatesTags[album]
           return [{ type: 'UsersAlbums', id: user.id }];
         },
         query: (user) => {
@@ -47,7 +47,7 @@ const albumsApi = createApi({
         },
       }),
       fetchAlbums: builder.query({
-        providesTags: (result, error, user) => {
+        providesTags: (result, error, user) => {               //providesTags[album]
           const tags = result.map((album) => {
             return { type: 'Album', id: album.id };
           });

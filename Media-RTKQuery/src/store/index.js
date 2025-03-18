@@ -7,8 +7,8 @@ import { photosApi } from './apis/photosApi';
 export const store = configureStore({
   reducer: {
     users: usersReducer,
-    [albumsApi.reducerPath]: albumsApi.reducer,
-    [photosApi.reducerPath]: photosApi.reducer,
+    [albumsApi.reducerPath]: albumsApi.reducer,  //ReducerPath er navnet på vores reducer i storen
+    [photosApi.reducerPath]: photosApi.reducer,  //slipper for stavefejl, da vi bruger variablen reducerPath, vi kunne have skrevet albums i stedet for albumsApi.reducerPath
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
