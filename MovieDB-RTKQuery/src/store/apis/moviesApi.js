@@ -11,9 +11,10 @@ const moviesApi = createApi({
       fetchPopularMovies: builder.query({
         query: () => {
           return {
-            url: 'discover/movie',
+          //url: 'discover/movie',
+            url: 'movie/popular',
             params: {
-              sort_by: 'popularity.desc',
+            //sort_by: 'popularity.desc',
               api_key: '81c50c197b83129dd4fc387ca6c8c323'
             },
             method: 'GET',
@@ -24,7 +25,7 @@ const moviesApi = createApi({
       fetchHighestRatedMovies: builder.query({
         query: () => {
           return {
-            url: 'discover/movie',
+            url: 'movie/top_rated',
             params: {
               sort_by: 'vote_average.desc',
               api_key: '81c50c197b83129dd4fc387ca6c8c323'
