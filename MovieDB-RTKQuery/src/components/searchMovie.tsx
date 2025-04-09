@@ -1,14 +1,16 @@
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../store"; // Import the RootState type
 import { changeSearchTerm } from "../store";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 function SearchMovie() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const searchTerm = useSelector((state) => {
+  const searchTerm = useSelector((state: RootState) => {
     return state.searchMovie.searchTerm;
   });
-
+  const navigate = useNavigate();
+ 
   const handleSearchTermChange = (event) => {
     dispatch(changeSearchTerm(event.target.value));
   }

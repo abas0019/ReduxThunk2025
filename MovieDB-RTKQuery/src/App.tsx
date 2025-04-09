@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import PopularMoviesList from "./components/popularMovieList";
 import HighestRatedMovieList from "./components/highestRatedMovieList"
@@ -5,6 +6,7 @@ import MovieImg from './assets/Image/movie_black2.jpg';
 import SearchMovie from './components/searchMovie';
 import SearchedMovieList from './components/searchedMovieList';
 import Home from './components/home';
+import MyList from './components/myList';
 
 function App() { 
   return (
@@ -15,6 +17,7 @@ function App() {
             <Link to='/' className="nav-item nav-link">Home</Link>
             <Link to='/popular' className="nav-item nav-link">Popular</Link>
             <Link to='/highest-rated' className="nav-item nav-link">Highest Rated</Link>
+            <Link to='/my-list' className="nav-item nav-link">my List</Link>
             <Link to='/' className="nav-item nav-link">My favorite</Link>
           </nav>
         </div> 
@@ -26,6 +29,7 @@ function App() {
             <Route path='/popular' element={<PopularMoviesList/>} />     
             <Route path='/highest-rated' element={<HighestRatedMovieList/>} />
             <Route path='/searchedMovie' element={<SearchedMovieList/>} /> 
+            <Route path='/my-list' element={<MyList/>} />
         </Routes>
     </div>
   );

@@ -1,12 +1,14 @@
 import { useFetchSearchMovieQuery } from "../store";
 import MovieCard from "./movieCard";
 import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { RootState } from "../store"; // Import the RootState type
+
 
 
 
 function SearchedMoviesList() {  
-    const dispatch = useDispatch();
-    const searchTerm = useSelector((state) => {
+    const searchTerm = useSelector((state: RootState) => {
         return state.searchMovie.searchTerm;
     });
                                   //Bemærk Query-function kaldes automatisk nå komponenten bliver displayed
@@ -38,5 +40,4 @@ function SearchedMoviesList() {
     </div>
   );
 }
-
 export default SearchedMoviesList;
